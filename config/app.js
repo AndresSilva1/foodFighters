@@ -12,7 +12,6 @@ app.use(require("morgan")("dev"));
 app.get("/", (req, res) => {});
     console.log("Recieved a GET request for the homepage");
     res.send("Hello GET");
-});
 
 
 app.listen(port, () => {
