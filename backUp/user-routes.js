@@ -9,7 +9,8 @@ router.post('/', async (req, res) => {
             email: req.body.email,
             password: req.body.password,
         });
-
+        //asynch await is like a stop light. Waiting for the database to respond to us. We are waiting specifically for user.create to finish exevuting.
+        //async is an enabler (similar to a flag)
         // Set up sessions with a 'loggedIn' variable set to `true`
         req.session.save(() => {
             req.session.loggedIn = true;
