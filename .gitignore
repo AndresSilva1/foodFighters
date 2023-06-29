@@ -1,4 +1,4 @@
-pwdnode_modules
+node_modules/
 package-lock.json
 .DS_Store
 .vscode
