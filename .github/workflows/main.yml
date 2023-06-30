@@ -1,4 +1,4 @@
-name: foodfighters
+name: Deploy to HEROKU
 
 on:
   push:
