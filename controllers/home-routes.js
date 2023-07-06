@@ -1,5 +1,7 @@
 const router = require('express').Router();
-
+router.get('/', (req, res) => {
+  res.render('home')
+})
 // Login route
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect to the homepage
@@ -11,8 +13,7 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
   
-router.get('/', (req, res) => {
-  res.render('home')
-})
+
+
 
 module.exports = router;
