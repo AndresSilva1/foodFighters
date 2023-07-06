@@ -1,0 +1,15 @@
+<div>
+    {{#each foodbanks as |bank|}}
+    <div class="card" style="width: 18rem;">
+        <div class="card-header">
+            {{bank.name}}
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">City: {{bank.city}}</li>
+            <li class="list-group-item">Zip code: {{bank.zip_code}}</li>
+            <li class="list-group-item">Address: {{bank.street_address}}</li>
+            <li class="list-group-item">Phone: {{bank.phone}}</li>
+        </ul>
+    </div>
+    {{/each}}
+</div>
