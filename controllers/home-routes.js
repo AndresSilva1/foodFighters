@@ -1,6 +1,5 @@
-const router = require("./api/user-routes");
+const router = require('express').Router();
 
-const = router
 // Login route
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect to the homepage
@@ -9,7 +8,13 @@ router.get('/login', (req, res) => {
     return;
   }
   // Otherwise, render the 'login' template
-  res.render('login');
+  let session = { loggedIn: req.session.loggedIn };
+  res.render('login', session);
 });
+
+router.get('/', (req, res) => {
+  let session = { loggedIn: req.session.loggedIn };
+  res.render('home', session);
+})
 
 module.exports = router;

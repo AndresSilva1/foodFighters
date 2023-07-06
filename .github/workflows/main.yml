@@ -1,0 +1,28 @@
+name: Deploy to HEROKU
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          repository: wooopers/Fightersproject4
+          ref: main
+          path: external-repo
+
+      - name: Use external YAML file
+        run: |
+          cat ./external-repo/.github/workflows/your-yaml-file.yml
+
+      - name: Deploy to Heroku
+        uses: akhileshns/heroku-deploy@v3.12.14
+        with:
+          heroku_api_key: ${{ secrets.MY_SECRET_NAME }}
+          heroku_app_name: "foodfighter" # Must be unique in Heroku
+          heroku_email: "kngordon@msn.com"
