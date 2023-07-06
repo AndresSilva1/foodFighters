@@ -1,12 +1,13 @@
 const axios = require('axios');
-const url = "https://controllerdata.lacity.org/resource/v2mg-qsxf.json"
-async function testing() {
+
+async function testing(cityName) {
     try {
-        const result = await axios.get(url);
-        console.log(result)
+
+        const result = await axios.get(`https://controllerdata.lacity.org/resource/v2mg-qsxf.json?city=${cityName}`);
+        return result;
     } catch (err) {
         console.log(err);
     }
 }
 
-testing();
+module.exports = testing

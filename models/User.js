@@ -50,5 +50,11 @@ User.init(
     modelName: 'user',
   }
 );
+//Add a food location model and add a name, address, and userID property
 
+//Want to have a post request that sends location data 
+
+//Each entry that we loop through should have a button. Button should send a post request. SImilar to the login.js. I also need the route to go along with it 
+
+//Have a button for each entry
 module.exports = User;
