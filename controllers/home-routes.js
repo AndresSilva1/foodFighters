@@ -8,11 +8,13 @@ router.get('/login', (req, res) => {
     return;
   }
   // Otherwise, render the 'login' template
-  res.render('login');
+  let session = { loggedIn: req.session.loggedIn };
+  res.render('login', session);
 });
-  
+
 router.get('/', (req, res) => {
-  res.render('home')
+  let session = { loggedIn: req.session.loggedIn };
+  res.render('home', session);
 })
 
 module.exports = router;

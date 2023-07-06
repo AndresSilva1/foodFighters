@@ -13,7 +13,10 @@ const sequelize = require('./config/connection');
 const app = express();
 const PORT = process.env.PORT || 3306;
 
-// const sessionStore = new SequelizeStore ({db: food_db})
+const sessionStore = new SequelizeStore({
+  db: sequelize,
+});
+
 // Set up sessions
 const sess = {
     secret: 'Super secret secret',
@@ -50,4 +53,4 @@ const sess = {
   sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log('Now listening'));
   });
-  
+
