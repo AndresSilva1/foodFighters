@@ -10,10 +10,19 @@ router.get('/login', (req, res) => {
     return;
   }
   // Otherwise, render the 'login' template
-  res.render('login');
+  let session = { loggedIn: req.session.loggedIn };
+  res.render('login', session);
 });
+<<<<<<< HEAD
   
 
 
+=======
+
+router.get('/', (req, res) => {
+  let session = { loggedIn: req.session.loggedIn };
+  res.render('home', session);
+})
+>>>>>>> main
 
 module.exports = router;
