@@ -25,6 +25,8 @@
         <link href="css/owl.theme.default.min.css" rel="stylesheet">
 
         <link href="css/tooplate-gotto-job.css" rel="stylesheet">
+
+        <link href="css/custom.css" rel="stylesheet">
         
 <!--
 
@@ -56,32 +58,20 @@ Bootstrap 5 HTML CSS Template
 
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav align-items-center ms-lg-5">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="index.html">Homepage</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About Food Fighters</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
-
-                        <li class="nav-item">
+                        <li class="nav-item home-btn">
                              <a href="/">Home</a>
-                                <!-- If the user is logged in, show a logout button -->
-                                {{#if loggedIn}}
-                                <button id="logout" class="btn-no-style">Logout</button>
-                                {{else}}
-                                <!-- Otherwise, show a link to login -->
-                                <a href="/login">Login/Sign Up</a>
-                                {{/if}}
                         </li>
-                        <li class="nav-item">
-                            {{#if loggedIn}}
-                             <script src="/js/logout.js"></script>
-                             {{/if}}
+                        <li class="nav-item login-nav">
+                            <!-- If the user is logged in, show a logout button -->
+                            {{#if loggedIn}}                            
+                            <button id="logout" class="btn btn-primary login-btn">Logout</button>
+                            <script src="/js/logout.js"></script>
+                            {{else}}
+                            <!-- Otherwise, show a link to login -->
+                            <a class="login-nav" href="/login">
+                                <button class="btn btn-primary login-btn">Login/Sign Up</button>
+                            </a>
+                            {{/if}}
                         </li>
                     </ul>
                 </div>

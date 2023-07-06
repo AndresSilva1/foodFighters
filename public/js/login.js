@@ -9,6 +9,7 @@ const loginFormHandler = async (event) => {
         method: 'POST',
         body: JSON.stringify({ email, password }),
         headers: { 'Content-Type': 'application/json' },
+        credentials: 'include'
       });
   
       if (response.ok) {
@@ -31,6 +32,7 @@ const loginFormHandler = async (event) => {
         method: 'POST',
         body: JSON.stringify({ username, email, password }),
         headers: { 'Content-Type': 'application/json' },
+        credentials: 'include'
       });
   
       if (response.ok) {

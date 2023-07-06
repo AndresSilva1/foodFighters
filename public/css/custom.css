@@ -1,0 +1,26 @@
+.login-card {
+    text-align: left;
+    margin: auto;
+    width: 200px;
+    margin-top: 0;
+}
+
+.login-nav{
+    float: right;
+}
+
+.navbar-nav .nav-item{
+    padding-right: 15px;
+}
+
+.login-btn{
+    background: var(--social-icon-link-bg-color);
+}
+
+.home-btn{
+    font-weight: 600;
+}
+
+.login-action-div{
+    padding-top: 10px;
+}
