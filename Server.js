@@ -8,63 +8,18 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const routes = require('./controllers');
 const sequelize = require('./config/connection');
+const { url } = require('inspector');
 // const helpers = require('./utils/helpers');
 
 const app = express();
 const PORT = process.env.PORT || 3306;
 
-//Data to connect API to server.js
+// Data to connect API to server.js
 function getAPIUrl() {
     let url = "https://controllerdata.lacity.org/resource/v2mg-qsxf.json";
     return url;
 }
 
-// function fetchData(url) {
-//     fetch(url)
-//         .then(function (response) {
-//             return response.json();
-//         })
-//         .then(function (data) {
-//             return data["results"];
-//         })
-//         .then(function (results) {
-//             setHTML(results);
-//         });
-// }
-
-// function fetchSuggestions(url) {
-//     fetch(url)
-//         .then(function (response) {
-//             return response.json();
-//         })
-//         .then(function (data) {
-//             return data.data["results"];
-//         })
-//         .then(function (results) {
-//             suggestionData = results;
-//         });
-// }
-
-// function setHTML(data) {
-//     console.log(data);
-//     data.forEach((element) => {
-//         // Display hero name
-//         document.querySelector("#city").textContent = element.name;
-//         // Display hero description
-//         document.querySelector("#zipcode").textContent =
-//             element.description;
-//         // Display hero thumbnail
-//         let thumbnail =
-//             element["thumbnail"]["path"] + "." + element["thumbnail"]["extension"];
-//         document.querySelector("#heroImage").setAttribute("src", thumbnail);
-//     });
-//     return;
-// }
-
-// window.onload = getData();
-
-// fetchData(getAPIUrl())
-// fetchSuggestions(url)
 //similar to a console.log
 const sessionStore = new SequelizeStore({
     db: sequelize,
