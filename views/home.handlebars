@@ -1,4 +1,3 @@
-
 <section class="hero-section d-flex justify-content-center align-items-center">
     <div class="section-overlay"></div>
 
@@ -16,36 +15,40 @@
             </div>
 
             <div class="col-lg-6 col-12">
-                <form class="custom-form hero-form" action="#" method="get" role="form">
+                <form id="homePageForm" class="custom-form hero-form" action="#" method="get" role="form">
                     <h3 class="text-white mb-3">Search for nearest food bank</h3>
 
-                    
 
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <div class="input-group">
-                                <span class="input-group-text" id="basic-addon2"><i class="bi-geo-alt custom-icon"></i></span>
 
-                                <input type="text" name="job-location" id="job-location" class="form-control" placeholder="Location" required>
-                            </div>
+                    <div class="col-lg-6 col-md-6 col-12">
+                        <div class="input-group">
+                            <span class="input-group-text" id="basic-addon2"><i
+                                    class="bi-geo-alt custom-icon"></i></span>
+
+                            <input type="text" name="job-location" id="job-location" class="form-control"
+                                placeholder="Location" required>
                         </div>
 
-                        <div class="col-lg-12 col-12">
-                            <button type="submit" class="form-control">
-                                Find location
-                            </button>
-                        </div>
+                    </div>
 
-                        <div class="col-12">
-                            <div class="d-flex flex-wrap align-items-center mt-4 mt-lg-0">
-                                <span class="text-white mb-lg-0 mb-md-0 me-2"></span>                         
-                                </div>
-                            </div>
+                    <div class="col-lg-12 col-12">
+                        <button type="submit" class="form-control">
+                            Find location
+                        </button>
+                        <div id="showName"></div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="d-flex flex-wrap align-items-center mt-4 mt-lg-0">
+                            <span class="text-white mb-lg-0 mb-md-0 me-2"></span>
                         </div>
                     </div>
-                </form>
             </div>
-
         </div>
+        </form>
+    </div>
+
+    </div>
     </div>
 </section>
 
@@ -57,7 +60,13 @@
             <div class="col-lg-12 col-12 text-center">
                 <h2 class="mb-5">About <span>Us</span></h2>
                 <h4>Food Fighters</h4>
-                <p>                    
-We want to help Californians. Our idea is creating a food bank resource within the state of California. By establishing a food bank website resource, we can provide essential food supplies to individuals and families facing food insecurity. We would like users to be able to log in to find resources and then have those be delivered by the organization for those who do not have the mobility to travel to the food bank. Reaching out to potential donors, volunteers, and community members can help raise awareness and gather support for your food bank.
+                <p>
+                    We want to help Californians. Our idea is creating a food bank resource within the state of
+                    California. By establishing a food bank website resource, we can provide essential food supplies to
+                    individuals and families facing food insecurity. We would like users to be able to log in to find
+                    resources and then have those be delivered by the organization for those who do not have the
+                    mobility to travel to the food bank. Reaching out to potential donors, volunteers, and community
+                    members can help raise awareness and gather support for your food bank.
                 </p>
             </div>
+            <script src="js/home.js"></script>

@@ -1,4 +1,5 @@
 const router = require('express').Router();
+
 const { User } = require('../../models');
 
 // CREATE new user
@@ -8,6 +9,7 @@ router.post('/', async (req, res) => {
       username: req.body.username,
       email: req.body.email,
       password: req.body.password,
+      // phone: req.body.phone,
     });
 
     // Set up sessions with a 'loggedIn' variable set to `true`
