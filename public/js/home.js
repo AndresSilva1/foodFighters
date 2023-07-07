@@ -40,6 +40,11 @@ const appendData = (data) => {
             let buttonDiv = document.createElement("button");
             buttonDiv.textContent = "save";
             showName.append(buttonDiv);
+            // an attempt to get the save button to work
+            // buttonDiv.addEventListener("click", function(e){
+            //     e.stopPropagation()
+            //     console.log(data[i])
+            // })
 
             buttonDiv.addEventListener("click", saveLocation(data[i]))
         }
